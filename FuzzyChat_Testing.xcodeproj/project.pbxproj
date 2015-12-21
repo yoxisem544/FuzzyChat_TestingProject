@@ -50,6 +50,7 @@
 		63722DB31C27A730004F1698 /* FuzzyChat_TestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyChat_TestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63722DB71C27A730004F1698 /* FuzzyChat_TestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyChat_TestingUITests.swift; sourceTree = "<group>"; };
 		63722DB91C27A730004F1698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63722DC51C27AC4F004F1698 /* FuzzyChatTestingProjectHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuzzyChatTestingProjectHeader.h; sourceTree = "<group>"; };
 		7CBC948F7879C2244F1D2406 /* Pods-FuzzyChat_Testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyChat_Testing.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyChat_Testing/Pods-FuzzyChat_Testing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +83,7 @@
 		63722D8B1C27A730004F1698 = {
 			isa = PBXGroup;
 			children = (
+				63722DC51C27AC4F004F1698 /* FuzzyChatTestingProjectHeader.h */,
 				63722D961C27A730004F1698 /* FuzzyChat_Testing */,
 				63722DAB1C27A730004F1698 /* FuzzyChat_TestingTests */,
 				63722DB61C27A730004F1698 /* FuzzyChat_TestingUITests */,
@@ -479,6 +481,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "misk.FuzzyChat-Testing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./FuzzyChatTestingProjectHeader.h;
 			};
 			name = Debug;
 		};
@@ -491,6 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "misk.FuzzyChat-Testing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./FuzzyChatTestingProjectHeader.h;
 			};
 			name = Release;
 		};
