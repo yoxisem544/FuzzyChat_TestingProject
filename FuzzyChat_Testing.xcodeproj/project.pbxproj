@@ -14,6 +14,7 @@
 		63722DA21C27A730004F1698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63722DA01C27A730004F1698 /* LaunchScreen.storyboard */; };
 		63722DAD1C27A730004F1698 /* FuzzyChat_TestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722DAC1C27A730004F1698 /* FuzzyChat_TestingTests.swift */; };
 		63722DB81C27A730004F1698 /* FuzzyChat_TestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722DB71C27A730004F1698 /* FuzzyChat_TestingUITests.swift */; };
+		F19543FD7D5BDB0F332CC9C7 /* libPods-FuzzyChat_Testing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC9820A59F13CC2585BC375 /* libPods-FuzzyChat_Testing.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05517812F9E485DFC7FF7DCF /* Pods-FuzzyChat_Testing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyChat_Testing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyChat_Testing/Pods-FuzzyChat_Testing.debug.xcconfig"; sourceTree = "<group>"; };
+		5DC9820A59F13CC2585BC375 /* libPods-FuzzyChat_Testing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FuzzyChat_Testing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63722D941C27A730004F1698 /* FuzzyChat_Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyChat_Testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63722D971C27A730004F1698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63722D991C27A730004F1698 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		63722DB31C27A730004F1698 /* FuzzyChat_TestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyChat_TestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63722DB71C27A730004F1698 /* FuzzyChat_TestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyChat_TestingUITests.swift; sourceTree = "<group>"; };
 		63722DB91C27A730004F1698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CBC948F7879C2244F1D2406 /* Pods-FuzzyChat_Testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyChat_Testing.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyChat_Testing/Pods-FuzzyChat_Testing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19543FD7D5BDB0F332CC9C7 /* libPods-FuzzyChat_Testing.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				63722DAB1C27A730004F1698 /* FuzzyChat_TestingTests */,
 				63722DB61C27A730004F1698 /* FuzzyChat_TestingUITests */,
 				63722D951C27A730004F1698 /* Products */,
+				DFB69E12F21177AB3F98EEF6 /* Pods */,
+				B44CDFD3731826D98A992106 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,23 @@
 			path = FuzzyChat_TestingUITests;
 			sourceTree = "<group>";
 		};
+		B44CDFD3731826D98A992106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9820A59F13CC2585BC375 /* libPods-FuzzyChat_Testing.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFB69E12F21177AB3F98EEF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05517812F9E485DFC7FF7DCF /* Pods-FuzzyChat_Testing.debug.xcconfig */,
+				7CBC948F7879C2244F1D2406 /* Pods-FuzzyChat_Testing.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63722DBC1C27A730004F1698 /* Build configuration list for PBXNativeTarget "FuzzyChat_Testing" */;
 			buildPhases = (
+				2EFE3A9CE9E7E391C432DD38 /* Check Pods Manifest.lock */,
 				63722D901C27A730004F1698 /* Sources */,
 				63722D911C27A730004F1698 /* Frameworks */,
 				63722D921C27A730004F1698 /* Resources */,
+				2F9523FE308C1847775140BE /* Embed Pods Frameworks */,
+				E063FD16FA4A394C79A7A46E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EFE3A9CE9E7E391C432DD38 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2F9523FE308C1847775140BE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuzzyChat_Testing/Pods-FuzzyChat_Testing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E063FD16FA4A394C79A7A46E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuzzyChat_Testing/Pods-FuzzyChat_Testing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63722D901C27A730004F1698 /* Sources */ = {
@@ -397,6 +472,7 @@
 		};
 		63722DBD1C27A730004F1698 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05517812F9E485DFC7FF7DCF /* Pods-FuzzyChat_Testing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FuzzyChat_Testing/Info.plist;
@@ -408,6 +484,7 @@
 		};
 		63722DBE1C27A730004F1698 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CBC948F7879C2244F1D2406 /* Pods-FuzzyChat_Testing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FuzzyChat_Testing/Info.plist;
@@ -484,6 +561,7 @@
 				63722DBE1C27A730004F1698 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63722DBF1C27A730004F1698 /* Build configuration list for PBXNativeTarget "FuzzyChat_TestingTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +570,7 @@
 				63722DC11C27A730004F1698 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63722DC21C27A730004F1698 /* Build configuration list for PBXNativeTarget "FuzzyChat_TestingUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +579,7 @@
 				63722DC41C27A730004F1698 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
