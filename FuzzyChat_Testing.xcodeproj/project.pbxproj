@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63722D981C27A730004F1698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722D971C27A730004F1698 /* AppDelegate.swift */; };
+		63722D9A1C27A730004F1698 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722D991C27A730004F1698 /* ViewController.swift */; };
+		63722D9D1C27A730004F1698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63722D9B1C27A730004F1698 /* Main.storyboard */; };
+		63722D9F1C27A730004F1698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63722D9E1C27A730004F1698 /* Assets.xcassets */; };
+		63722DA21C27A730004F1698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63722DA01C27A730004F1698 /* LaunchScreen.storyboard */; };
+		63722DAD1C27A730004F1698 /* FuzzyChat_TestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722DAC1C27A730004F1698 /* FuzzyChat_TestingTests.swift */; };
+		63722DB81C27A730004F1698 /* FuzzyChat_TestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722DB71C27A730004F1698 /* FuzzyChat_TestingUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63722DA91C27A730004F1698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63722D8C1C27A730004F1698 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63722D931C27A730004F1698;
+			remoteInfo = FuzzyChat_Testing;
+		};
+		63722DB41C27A730004F1698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63722D8C1C27A730004F1698 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63722D931C27A730004F1698;
+			remoteInfo = FuzzyChat_Testing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63722D941C27A730004F1698 /* FuzzyChat_Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyChat_Testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63722D971C27A730004F1698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63722D991C27A730004F1698 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63722D9C1C27A730004F1698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63722D9E1C27A730004F1698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63722DA11C27A730004F1698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63722DA31C27A730004F1698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63722DA81C27A730004F1698 /* FuzzyChat_TestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyChat_TestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63722DAC1C27A730004F1698 /* FuzzyChat_TestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyChat_TestingTests.swift; sourceTree = "<group>"; };
+		63722DAE1C27A730004F1698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63722DB31C27A730004F1698 /* FuzzyChat_TestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyChat_TestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63722DB71C27A730004F1698 /* FuzzyChat_TestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyChat_TestingUITests.swift; sourceTree = "<group>"; };
+		63722DB91C27A730004F1698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63722D911C27A730004F1698 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63722DA51C27A730004F1698 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63722DB01C27A730004F1698 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63722D8B1C27A730004F1698 = {
+			isa = PBXGroup;
+			children = (
+				63722D961C27A730004F1698 /* FuzzyChat_Testing */,
+				63722DAB1C27A730004F1698 /* FuzzyChat_TestingTests */,
+				63722DB61C27A730004F1698 /* FuzzyChat_TestingUITests */,
+				63722D951C27A730004F1698 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63722D951C27A730004F1698 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63722D941C27A730004F1698 /* FuzzyChat_Testing.app */,
+				63722DA81C27A730004F1698 /* FuzzyChat_TestingTests.xctest */,
+				63722DB31C27A730004F1698 /* FuzzyChat_TestingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63722D961C27A730004F1698 /* FuzzyChat_Testing */ = {
+			isa = PBXGroup;
+			children = (
+				63722D971C27A730004F1698 /* AppDelegate.swift */,
+				63722D991C27A730004F1698 /* ViewController.swift */,
+				63722D9B1C27A730004F1698 /* Main.storyboard */,
+				63722D9E1C27A730004F1698 /* Assets.xcassets */,
+				63722DA01C27A730004F1698 /* LaunchScreen.storyboard */,
+				63722DA31C27A730004F1698 /* Info.plist */,
+			);
+			path = FuzzyChat_Testing;
+			sourceTree = "<group>";
+		};
+		63722DAB1C27A730004F1698 /* FuzzyChat_TestingTests */ = {
+			isa = PBXGroup;
+			children = (
+				63722DAC1C27A730004F1698 /* FuzzyChat_TestingTests.swift */,
+				63722DAE1C27A730004F1698 /* Info.plist */,
+			);
+			path = FuzzyChat_TestingTests;
+			sourceTree = "<group>";
+		};
+		63722DB61C27A730004F1698 /* FuzzyChat_TestingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				63722DB71C27A730004F1698 /* FuzzyChat_TestingUITests.swift */,
+				63722DB91C27A730004F1698 /* Info.plist */,
+			);
+			path = FuzzyChat_TestingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63722D931C27A730004F1698 /* FuzzyChat_Testing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63722DBC1C27A730004F1698 /* Build configuration list for PBXNativeTarget "FuzzyChat_Testing" */;
+			buildPhases = (
+				63722D901C27A730004F1698 /* Sources */,
+				63722D911C27A730004F1698 /* Frameworks */,
+				63722D921C27A730004F1698 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuzzyChat_Testing;
+			productName = FuzzyChat_Testing;
+			productReference = 63722D941C27A730004F1698 /* FuzzyChat_Testing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63722DA71C27A730004F1698 /* FuzzyChat_TestingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63722DBF1C27A730004F1698 /* Build configuration list for PBXNativeTarget "FuzzyChat_TestingTests" */;
+			buildPhases = (
+				63722DA41C27A730004F1698 /* Sources */,
+				63722DA51C27A730004F1698 /* Frameworks */,
+				63722DA61C27A730004F1698 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63722DAA1C27A730004F1698 /* PBXTargetDependency */,
+			);
+			name = FuzzyChat_TestingTests;
+			productName = FuzzyChat_TestingTests;
+			productReference = 63722DA81C27A730004F1698 /* FuzzyChat_TestingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		63722DB21C27A730004F1698 /* FuzzyChat_TestingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63722DC21C27A730004F1698 /* Build configuration list for PBXNativeTarget "FuzzyChat_TestingUITests" */;
+			buildPhases = (
+				63722DAF1C27A730004F1698 /* Sources */,
+				63722DB01C27A730004F1698 /* Frameworks */,
+				63722DB11C27A730004F1698 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63722DB51C27A730004F1698 /* PBXTargetDependency */,
+			);
+			name = FuzzyChat_TestingUITests;
+			productName = FuzzyChat_TestingUITests;
+			productReference = 63722DB31C27A730004F1698 /* FuzzyChat_TestingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63722D8C1C27A730004F1698 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = David;
+				TargetAttributes = {
+					63722D931C27A730004F1698 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					63722DA71C27A730004F1698 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 63722D931C27A730004F1698;
+					};
+					63722DB21C27A730004F1698 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 63722D931C27A730004F1698;
+					};
+				};
+			};
+			buildConfigurationList = 63722D8F1C27A730004F1698 /* Build configuration list for PBXProject "FuzzyChat_Testing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63722D8B1C27A730004F1698;
+			productRefGroup = 63722D951C27A730004F1698 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63722D931C27A730004F1698 /* FuzzyChat_Testing */,
+				63722DA71C27A730004F1698 /* FuzzyChat_TestingTests */,
+				63722DB21C27A730004F1698 /* FuzzyChat_TestingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63722D921C27A730004F1698 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63722DA21C27A730004F1698 /* LaunchScreen.storyboard in Resources */,
+				63722D9F1C27A730004F1698 /* Assets.xcassets in Resources */,
+				63722D9D1C27A730004F1698 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63722DA61C27A730004F1698 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63722DB11C27A730004F1698 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63722D901C27A730004F1698 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63722D9A1C27A730004F1698 /* ViewController.swift in Sources */,
+				63722D981C27A730004F1698 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63722DA41C27A730004F1698 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63722DAD1C27A730004F1698 /* FuzzyChat_TestingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63722DAF1C27A730004F1698 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63722DB81C27A730004F1698 /* FuzzyChat_TestingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63722DAA1C27A730004F1698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63722D931C27A730004F1698 /* FuzzyChat_Testing */;
+			targetProxy = 63722DA91C27A730004F1698 /* PBXContainerItemProxy */;
+		};
+		63722DB51C27A730004F1698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63722D931C27A730004F1698 /* FuzzyChat_Testing */;
+			targetProxy = 63722DB41C27A730004F1698 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63722D9B1C27A730004F1698 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63722D9C1C27A730004F1698 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63722DA01C27A730004F1698 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63722DA11C27A730004F1698 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63722DBA1C27A730004F1698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63722DBB1C27A730004F1698 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63722DBD1C27A730004F1698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FuzzyChat_Testing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "misk.FuzzyChat-Testing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		63722DBE1C27A730004F1698 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FuzzyChat_Testing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "misk.FuzzyChat-Testing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		63722DC01C27A730004F1698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FuzzyChat_TestingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "misk.FuzzyChat-TestingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FuzzyChat_Testing.app/FuzzyChat_Testing";
+			};
+			name = Debug;
+		};
+		63722DC11C27A730004F1698 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FuzzyChat_TestingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "misk.FuzzyChat-TestingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FuzzyChat_Testing.app/FuzzyChat_Testing";
+			};
+			name = Release;
+		};
+		63722DC31C27A730004F1698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FuzzyChat_TestingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "misk.FuzzyChat-TestingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FuzzyChat_Testing;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		63722DC41C27A730004F1698 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FuzzyChat_TestingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "misk.FuzzyChat-TestingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FuzzyChat_Testing;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63722D8F1C27A730004F1698 /* Build configuration list for PBXProject "FuzzyChat_Testing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63722DBA1C27A730004F1698 /* Debug */,
+				63722DBB1C27A730004F1698 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63722DBC1C27A730004F1698 /* Build configuration list for PBXNativeTarget "FuzzyChat_Testing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63722DBD1C27A730004F1698 /* Debug */,
+				63722DBE1C27A730004F1698 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63722DBF1C27A730004F1698 /* Build configuration list for PBXNativeTarget "FuzzyChat_TestingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63722DC01C27A730004F1698 /* Debug */,
+				63722DC11C27A730004F1698 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63722DC21C27A730004F1698 /* Build configuration list for PBXNativeTarget "FuzzyChat_TestingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63722DC31C27A730004F1698 /* Debug */,
+				63722DC41C27A730004F1698 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63722D8C1C27A730004F1698 /* Project object */;
+}
