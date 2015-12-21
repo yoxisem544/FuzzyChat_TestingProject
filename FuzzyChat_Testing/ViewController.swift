@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var myRootRef = Firebase(url: "https://fuzzychat-testing.firebaseio.com/")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var temp_users = myRootRef.childByAppendingPath("saving-data/temp_users")
+        var alanisawesome = ["full_name": "Alan Turing", "date_of_birth": "June 23, 1912"]
+        var gracehop = ["full_name": "Grace Hopper", "date_of_birth": "December 9, 1906"]
+        var users = ["alanisawesome": alanisawesome, "gracehop": gracehop]
+        temp_users.setValue(users)
     }
 
     override func didReceiveMemoryWarning() {
