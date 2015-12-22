@@ -30,10 +30,49 @@ https://dinosaur-facts.firebaseio.com/dinosaurs
 就可以抓到一堆 `dinosaurs` 了！變成在 `dinosaurs` 的node上面。於是你會抓到一堆恐龍。
 
 ### 瞭解資料型態
+在`Firebase`中，你只可以傳進 `String`, `Int`, `Array`, `Dictionary`四種型態（iOS中的限制），而他會幫你自動轉成JSON type.
 
+讓我們看看下面的例子
+
+```
+{
+  "users": {
+    "mchen": {
+      "friends": { "brinchen": true },
+      "name": "Mary Chen",
+      // our child node appears in the existing JSON tree
+      "widgets": { "one": true, "three": true }
+    },
+    "brinchen": { ... },
+    "hmadi": { ... }
+  }
+}
+```
+
+這是在Firebase之中，資料的樣子，就像是JSON
+
+但是在iOS之中無法直接以Array的型態取值，必須以enumrate的方式取，就是`for..in`的方式取。
+假設你取到的是一包陣列，那就必須要這樣子來取得每一筆資料的值
+
+```swift
+for s in snapshot.children {
+	// do something...
+}
+```
 ### 傳送資料
+要上傳一筆資料的話要先確定你的資料符合上面四種型態
+
+```swift
+let value = ["foo": "bar", "foo_arr": [1,2,3,4], "num": 1]
+myRootRef.setValue(value)
+```
 
 ### 隨機產生childId
+這個很簡單，跟著我做就好，他會自動產生id
+
+```swift
+myRootRef.childByAutoId().setValue(value)
+```
 
 ### Query
 
