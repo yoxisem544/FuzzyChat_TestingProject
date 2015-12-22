@@ -44,11 +44,14 @@ class ViewController: JSQMessagesViewController {
     
     // MARK: toolbar
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
-        <#code#>
+        print(text)
+        print(senderId)
+        print(senderDisplayName)
+        print(date)
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {
-        <#code#>
+        print("acc tapped")
     }
 
     // MARK: JSQ Data source
