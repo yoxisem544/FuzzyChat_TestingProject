@@ -47,12 +47,6 @@ class ViewController: JSQMessagesViewController {
         collectionView!.collectionViewLayout.springinessEnabled = true
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        JSQMessagesCollectionViewFlowLayoutInvalidationContext.con
-    }
-
     func sendMessage(text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
         let msg = ["text": text, "sender_id": senderId, "sender_display_name": senderDisplayName, "date": date.stringValue]
         messageRef.childByAutoId().setValue(msg)

@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'FuzzyChat_Testing' do
-  pod 'JSQMessagesViewController', '~> 7.2'
+  # pod 'JSQMessagesViewController', '~> 7.2'
   pod 'Firebase', '>= 2.5.0'
 end
 
