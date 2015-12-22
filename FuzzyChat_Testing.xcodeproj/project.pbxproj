@@ -14,6 +14,8 @@
 		63722DA21C27A730004F1698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63722DA01C27A730004F1698 /* LaunchScreen.storyboard */; };
 		63722DAD1C27A730004F1698 /* FuzzyChat_TestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722DAC1C27A730004F1698 /* FuzzyChat_TestingTests.swift */; };
 		63722DB81C27A730004F1698 /* FuzzyChat_TestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722DB71C27A730004F1698 /* FuzzyChat_TestingUITests.swift */; };
+		63722DC71C292574004F1698 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722DC61C292573004F1698 /* Message.swift */; };
+		63722DC91C2933CD004F1698 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63722DC81C2933CD004F1698 /* 1.jpg */; };
 		F19543FD7D5BDB0F332CC9C7 /* libPods-FuzzyChat_Testing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC9820A59F13CC2585BC375 /* libPods-FuzzyChat_Testing.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		63722DB71C27A730004F1698 /* FuzzyChat_TestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyChat_TestingUITests.swift; sourceTree = "<group>"; };
 		63722DB91C27A730004F1698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63722DC51C27AC4F004F1698 /* FuzzyChatTestingProjectHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuzzyChatTestingProjectHeader.h; sourceTree = "<group>"; };
+		63722DC61C292573004F1698 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		63722DC81C2933CD004F1698 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		7CBC948F7879C2244F1D2406 /* Pods-FuzzyChat_Testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyChat_Testing.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyChat_Testing/Pods-FuzzyChat_Testing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +112,8 @@
 			children = (
 				63722D971C27A730004F1698 /* AppDelegate.swift */,
 				63722D991C27A730004F1698 /* ViewController.swift */,
+				63722DC61C292573004F1698 /* Message.swift */,
+				63722DC81C2933CD004F1698 /* 1.jpg */,
 				63722D9B1C27A730004F1698 /* Main.storyboard */,
 				63722D9E1C27A730004F1698 /* Assets.xcassets */,
 				63722DA01C27A730004F1698 /* LaunchScreen.storyboard */,
@@ -259,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63722DA21C27A730004F1698 /* LaunchScreen.storyboard in Resources */,
+				63722DC91C2933CD004F1698 /* 1.jpg in Resources */,
 				63722D9F1C27A730004F1698 /* Assets.xcassets in Resources */,
 				63722D9D1C27A730004F1698 /* Main.storyboard in Resources */,
 			);
@@ -333,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63722DC71C292574004F1698 /* Message.swift in Sources */,
 				63722D9A1C27A730004F1698 /* ViewController.swift in Sources */,
 				63722D981C27A730004F1698 /* AppDelegate.swift in Sources */,
 			);
