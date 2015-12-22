@@ -17,9 +17,15 @@ class ViewController: JSQMessagesViewController {
     var incomingMessagesBubbleImage = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleGreenColor())
     
     func setupFirebase() {
+        // initialize
+        messages = []
+        // query the latest 25 messages
         messageRef.queryLimitedToLast(25).observeEventType(.ChildAdded) { (s: FDataSnapshot!) -> Void in
             print(s)
-            
+            let text = s.value?["text"] as? String
+            let sender = s.value?["sender_id"] as? String
+            let msg = Message(text: text!, sender: sender!)
+            self.messages?.append(msg)
             // after receiving msgs
             self.finishReceivingMessage()
         }
@@ -36,10 +42,20 @@ class ViewController: JSQMessagesViewController {
         setupJSQ()
         setupFirebase()
     }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView!.collectionViewLayout.springinessEnabled = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        JSQMessagesCollectionViewFlowLayoutInvalidationContext.con
+    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func sendMessage(text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+        let msg = ["text": text, "sender_id": senderId, "sender_display_name": senderDisplayName, "date": date.stringValue]
+        messageRef.childByAutoId().setValue(msg)
     }
     
     // MARK: toolbar
@@ -48,6 +64,8 @@ class ViewController: JSQMessagesViewController {
         print(senderId)
         print(senderDisplayName)
         print(date)
+        sendMessage(text, senderId: senderId, senderDisplayName: senderDisplayName, date: date)
+        finishSendingMessage()
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {
@@ -55,6 +73,13 @@ class ViewController: JSQMessagesViewController {
     }
 
     // MARK: JSQ Data source
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if messages != nil {
+            return messages!.count
+        }
+        
+        return 0
+    }
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
         return messages![indexPath.item]
     }
@@ -78,5 +103,29 @@ class ViewController: JSQMessagesViewController {
         return a
     }
 
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
+        
+        let msg = messages![indexPath.item]
+        if msg.senderId() == senderId {
+            cell.textView?.textColor = UIColor.blackColor()
+        } else {
+            cell.textView?.textColor = UIColor.whiteColor()
+        }
+        
+        return cell
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        
+        return kJSQMessagesCollectionViewCellLabelHeightDefault
+    }
 }
 
+extension NSDate {
+    var stringValue: String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
+        return formatter.stringFromDate(self)
+    }
+}
