@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '240FDDA5BE96D5F4546DA865'
+               BlueprintIdentifier = '2B0CAC0083EB96030C7D1261'
                BlueprintName = 'Pods-FuzzyChat_Testing'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-FuzzyChat_Testing.a'>

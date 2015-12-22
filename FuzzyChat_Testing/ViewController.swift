@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: JSQMessagesViewController {
+class ViewController: JSQMessagesViewController , JSQMessagesBubbleSizeCalculating {
 
     var messageRef = Firebase(url: "https://fuzzychat-testing.firebaseio.com/").childByAppendingPath("testing-message")
     var messages: [Message]?
@@ -21,7 +21,6 @@ class ViewController: JSQMessagesViewController {
         messages = []
         // query the latest 25 messages
         messageRef.queryLimitedToLast(25).observeEventType(.ChildAdded) { (s: FDataSnapshot!) -> Void in
-            print(s)
             let text = s.value?["text"] as? String
             let sender = s.value?["sender_id"] as? String
             let msg = Message(text: text!, sender: sender!)
@@ -44,8 +43,31 @@ class ViewController: JSQMessagesViewController {
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        collectionView!.collectionViewLayout.springinessEnabled = true
     }
+    
+    func messageBubbleSizeForMessageData(messageData: JSQMessageData!, atIndexPath indexPath: NSIndexPath!, withLayout layout: JSQMessagesCollectionViewFlowLayout!) -> CGSize {
+        return CGSize(width: 200, height: 200)
+    }
+    
+    func prepareForResettingLayout(layout: JSQMessagesCollectionViewFlowLayout!) {
+        print("do reset")
+    }
+    
+//    func hi() {
+//        let context = JSQMessagesCollectionViewFlowLayoutInvalidationContext()
+//        context.invalidateFlowLayoutMessagesCache = true
+//        self.collectionView?.collectionViewLayout.invalidateLayoutWithContext(context)
+//    }
+//    
+//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+//        hi()
+//    }
+//    
+//    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+//        super.traitCollectionDidChange(previousTraitCollection)
+//        hi()
+//    }
     
     func sendMessage(text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
         let msg = ["text": text, "sender_id": senderId, "sender_display_name": senderDisplayName, "date": date.stringValue]
