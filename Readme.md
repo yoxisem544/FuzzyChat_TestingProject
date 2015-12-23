@@ -185,9 +185,62 @@ messages一定很大包，而且會隨著時間推進而變大，所以我們不
 就可以只查找user1, user2的資料，速度上會很多。
 
 ### 資料結構
-優點與缺點
+#### 優點與缺點
+##### 不好
+這個方式設計的話你每次都會把messages給讀出來，資料不僅大包還會拖慢效能。
+於是用flatten data的想法去設計。
+```JSON
+{
+	conversations: {
+		room1: {
+			user_1: 1,
+			user_2: 2,
+			messages: [...]
+		},
+		room2: {...},
+		room3: {...},
+		room4: {...},
+		.
+		.
+		.
+	}
+}
+```
 
-
+##### 好
+我們把大包的資料放在另外的node上面，這樣我們每次取conversations時不會把所有的訊息都拿出來了。我們需要訊息時才會依據room名稱去存取。
+```JSON
+{
+	conversations: {
+		room1: {
+			user_1: 1,
+			user_2: 2,
+			room_name: "room1"
+		},
+		room2: {...},
+		room3: {...},
+		room4: {...},
+		.
+		.
+		.
+	},
+	rooms: {
+		room1: {
+			msg1: {},
+			msg2: {},
+			.
+			.
+			.
+		},
+		room2: {...},
+		room3: {...},
+		room4: {...},
+		.
+		.
+		.
+	}
+}
+```
 
 
 ## 截圖（完成再捕）
