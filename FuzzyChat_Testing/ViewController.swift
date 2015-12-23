@@ -16,24 +16,29 @@ class ViewController: JSQMessagesViewController , JSQMessagesBubbleSizeCalculati
     var outgoingMessagesBubbleImage = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
     var incomingMessagesBubbleImage = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleGreenColor())
     
+    // link temp room seperate
+    var conversationRef = Firebase(url: FirebaseLinks.conversations)
+    var roomId: String?
+    
     func setupFirebase() {
         // initialize
         messages = []
         // query the latest 25 messages
-        messageRef.queryLimitedToLast(25).observeEventType(.ChildAdded) { (s: FDataSnapshot!) -> Void in
-            let text = s.value?["text"] as? String
-            let sender = s.value?["sender_id"] as? String
-            let msg = Message(text: text!, sender: sender!)
-            self.messages?.append(msg)
-            // after receiving msgs
-            self.finishReceivingMessage()
+        if roomId != nil {
+            conversationRef.childByAppendingPath(roomId).queryLimitedToLast(25).observeEventType(.ChildAdded) { (s: FDataSnapshot!) -> Void in
+                let text = s.value?["text"] as? String
+                let sender = s.value?["sender_id"] as? String
+                let msg = Message(text: text!, sender: sender!)
+                self.messages?.append(msg)
+                // after receiving msgs
+                self.finishReceivingMessage()
+            }
         }
-        messageRef.queryEqualToValue([])
     }
     
     func setupJSQ() {
-        senderId = "some one!"
-        senderDisplayName = "Displaying Name"
+        senderId = "997"
+        senderDisplayName = "Displaying Name of shit"
     }
     
     override func viewDidLoad() {
@@ -72,7 +77,7 @@ class ViewController: JSQMessagesViewController , JSQMessagesBubbleSizeCalculati
     
     func sendMessage(text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
         let msg = ["text": text, "sender_id": senderId, "sender_display_name": senderDisplayName, "date": date.stringValue]
-        messageRef.childByAutoId().setValue(msg)
+        conversationRef.childByAppendingPath(roomId).childByAutoId().setValue(msg)
     }
     
     // MARK: toolbar

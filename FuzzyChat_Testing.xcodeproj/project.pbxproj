@@ -16,6 +16,14 @@
 		63722DB81C27A730004F1698 /* FuzzyChat_TestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722DB71C27A730004F1698 /* FuzzyChat_TestingUITests.swift */; };
 		63722DC71C292574004F1698 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722DC61C292573004F1698 /* Message.swift */; };
 		63722DC91C2933CD004F1698 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63722DC81C2933CD004F1698 /* 1.jpg */; };
+		63722E5E1C2A41CC004F1698 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722E5D1C2A41CC004F1698 /* TestViewController.swift */; };
+		63722E601C2A58E1004F1698 /* TalkAboutYourselfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722E5F1C2A58E1004F1698 /* TalkAboutYourselfViewController.swift */; };
+		63722E621C2A59ED004F1698 /* ShowMurmurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722E611C2A59ED004F1698 /* ShowMurmurTableViewController.swift */; };
+		63722E641C2A6D73004F1698 /* MurmurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722E631C2A6D73004F1698 /* MurmurTableViewCell.swift */; };
+		63722E661C2A6FBC004F1698 /* FirebaseLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722E651C2A6FBC004F1698 /* FirebaseLinks.swift */; };
+		63722E681C2A71D6004F1698 /* Murmur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722E671C2A71D6004F1698 /* Murmur.swift */; };
+		63722E6A1C2A7BA7004F1698 /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722E691C2A7BA7004F1698 /* RoomsTableViewController.swift */; };
+		63722E6C1C2A7C0F004F1698 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63722E6B1C2A7C0F004F1698 /* Room.swift */; };
 		F19543FD7D5BDB0F332CC9C7 /* libPods-FuzzyChat_Testing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC9820A59F13CC2585BC375 /* libPods-FuzzyChat_Testing.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +63,14 @@
 		63722DC51C27AC4F004F1698 /* FuzzyChatTestingProjectHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuzzyChatTestingProjectHeader.h; sourceTree = "<group>"; };
 		63722DC61C292573004F1698 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		63722DC81C2933CD004F1698 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		63722E5D1C2A41CC004F1698 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		63722E5F1C2A58E1004F1698 /* TalkAboutYourselfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkAboutYourselfViewController.swift; sourceTree = "<group>"; };
+		63722E611C2A59ED004F1698 /* ShowMurmurTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMurmurTableViewController.swift; sourceTree = "<group>"; };
+		63722E631C2A6D73004F1698 /* MurmurTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MurmurTableViewCell.swift; sourceTree = "<group>"; };
+		63722E651C2A6FBC004F1698 /* FirebaseLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLinks.swift; sourceTree = "<group>"; };
+		63722E671C2A71D6004F1698 /* Murmur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Murmur.swift; sourceTree = "<group>"; };
+		63722E691C2A7BA7004F1698 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
+		63722E6B1C2A7C0F004F1698 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		7CBC948F7879C2244F1D2406 /* Pods-FuzzyChat_Testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyChat_Testing.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyChat_Testing/Pods-FuzzyChat_Testing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +131,14 @@
 				63722DC61C292573004F1698 /* Message.swift */,
 				63722DC81C2933CD004F1698 /* 1.jpg */,
 				63722D9B1C27A730004F1698 /* Main.storyboard */,
+				63722E691C2A7BA7004F1698 /* RoomsTableViewController.swift */,
+				63722E6B1C2A7C0F004F1698 /* Room.swift */,
+				63722E631C2A6D73004F1698 /* MurmurTableViewCell.swift */,
+				63722E611C2A59ED004F1698 /* ShowMurmurTableViewController.swift */,
+				63722E671C2A71D6004F1698 /* Murmur.swift */,
+				63722E651C2A6FBC004F1698 /* FirebaseLinks.swift */,
+				63722E5F1C2A58E1004F1698 /* TalkAboutYourselfViewController.swift */,
+				63722E5D1C2A41CC004F1698 /* TestViewController.swift */,
 				63722D9E1C27A730004F1698 /* Assets.xcassets */,
 				63722DA01C27A730004F1698 /* LaunchScreen.storyboard */,
 				63722DA31C27A730004F1698 /* Info.plist */,
@@ -340,9 +364,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63722E6A1C2A7BA7004F1698 /* RoomsTableViewController.swift in Sources */,
+				63722E661C2A6FBC004F1698 /* FirebaseLinks.swift in Sources */,
+				63722E601C2A58E1004F1698 /* TalkAboutYourselfViewController.swift in Sources */,
 				63722DC71C292574004F1698 /* Message.swift in Sources */,
+				63722E621C2A59ED004F1698 /* ShowMurmurTableViewController.swift in Sources */,
 				63722D9A1C27A730004F1698 /* ViewController.swift in Sources */,
+				63722E5E1C2A41CC004F1698 /* TestViewController.swift in Sources */,
 				63722D981C27A730004F1698 /* AppDelegate.swift in Sources */,
+				63722E641C2A6D73004F1698 /* MurmurTableViewCell.swift in Sources */,
+				63722E681C2A71D6004F1698 /* Murmur.swift in Sources */,
+				63722E6C1C2A7C0F004F1698 /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
