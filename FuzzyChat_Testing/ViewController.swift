@@ -28,6 +28,7 @@ class ViewController: JSQMessagesViewController , JSQMessagesBubbleSizeCalculati
             // after receiving msgs
             self.finishReceivingMessage()
         }
+        messageRef.queryEqualToValue([])
     }
     
     func setupJSQ() {

@@ -34,7 +34,7 @@ https://dinosaur-facts.firebaseio.com/dinosaurs
 
 讓我們看看下面的例子
 
-```
+```JSON
 {
   "users": {
     "mchen": {
@@ -73,14 +73,116 @@ myRootRef.setValue(value)
 ```swift
 myRootRef.childByAutoId().setValue(value)
 ```
+### 取得資料
+Firebase中要取得資料很簡單，只要用`observeEventType`就可以取到了。
+```swift
+myRootRef.observeEventType(FEventType){ (snapshot: FDataSnapshot!) -> Void in           
+}
+```
+
+`FEventType`常用的有`.Value`跟`.ChildAdd`型態。
+
+`.Value`是只要任何資料有變動都會通知。
+
+`.ChildAdd`是只有在新增時才會通知。
+
+可以善用這些監聽來做出聊天室的功能。
+
 
 ### Query
+在Firebase的Query限制比較多，他只能對一個node做query，而且只能對一層做query。
+
+讓我們看看下面的例子
+
+```JSON
+{
+  "users": {
+    "mchen": {
+      "friends": { "brinchen": true },
+      "name": "Mary Chen",
+      // our child node appears in the existing JSON tree
+      "widgets": { "one": true, "three": true }
+    },
+    "brinchen": { ... },
+    "hmadi": { ... }
+  }
+}
+```
+
+假設你現在在users的node上，你可以對這些資料作`queryOrderWithKey`，那這些資料就會被排列好。但是你無法再次對這個query再做一次query，這是他的一個限制。
+
+可
+
+```swift
+myRootRef.queryOrderWithKey()
+```
+
+不可
+
+```swift
+myRootRef.queryOrderWithKey().queryOrderWithChild(friends)
+```
 
 ### Limit
+在Firebase，一個query會將所有的資料都dump出來。所以這邊如果你不想一次讓所有的聊天訊息都被load出來，你可以對他做限制，一次可以只要求一些資料就好。
+
+在此我們先拿到儲存訊息的node。
+
+```swift
+myRootRef.childByAppendingPath("messages")
+```
+
+接著我們只想要拿到最新的`25`筆資料
+
+```swift
+myRootRef.childByAppendingPath("messages").quertLimitToLast(25)
+```
+
+即可拿到最新的25筆資料。
 
 ### EqualTo
+如果你想要指定要拿到的資料，可以使用這個方法拿到想要的資料。但是這邊只能指定`String`, `NSNumber` 或者 `nil`。而我嘗試過的結果，你要指定資料，key下面對應到的就要是value，而不能是一個object。
+
+譬如你只想要拿到某A使用者發出的訊息，先是要query到你要查找的key上，假設我們有一個key會對應到使用者名稱，最後才`queryEqualTo("something")`
+
+```swift
+myRootRef.childByAppendingPath("messages").queryOrderByChild("user").queryEqualTo("A")
+```
+
+## Query 上的限制
+Query有分幾類型 `queryOrder`類，`queryLimit`類，`queryEqualTo`類。
+
+只有`queryOrder`不能一直連續呼叫，Firebase只允許你呼叫一次。
+
+但是`queryLimit`類，`queryEqualTo`類，就沒有關係了，順序上不會互相衝突，也可以連續呼叫。（雖然意義上不大）
 
 ### indexOf Improve Performance
+`.indexOf`可以限制你在query時候查找的位置，可以不要查找資料量大的地方，可以讓效能變好。
+例子：
+
+```JSON
+room: {
+	user_id_1: 10,
+	user_id_2: 98,
+	messages: [...一堆資料]
+}
+```
+
+messages一定很大包，而且會隨著時間推進而變大，所以我們不要每次query都要比較他。於是我們可以在`rules`這邊做：
+
+```JSON
+{
+    "rules": {
+        ".read": true,
+        ".write": true,
+        "conversations": {
+          ".indexOn": ["user_id_1", "user_id_2"]
+        }
+    }
+}
+```
+
+就可以只查找user1, user2的資料，速度上會很多。
 
 ### 資料結構
 優點與缺點
